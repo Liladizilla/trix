@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("Si0WeEW47pAIBakXo"); // Replace with your actual public key
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="store.html">Digital Store</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="services">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="services-container">
+      <form id="contact-form" style="width: 100%; max-width: 600px; margin: 0 auto;">
+        <input type="text" name="from_name" placeholder="Your Name" required style="width:100%; padding:10px; margin:10px 0;">
+        <input type="email" name="from_email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;">
+        <textarea name="message" placeholder="Your Message" rows="5" required style="width:100%; padding:10px; margin:10px 0;"></textarea>
+        <button type="submit" class="cta-btn">Send Message</button>
+      </form>
+      <p id="status-msg" style="margin-top:20px;"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CYBERZILLA Technologies. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const statusMsg = document.getElementById('status-msg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_xerbh4g", "", this)
+        .then(() => {
+          statusMsg.textContent = "Message sent successfully!";
+          form.reset();
+        }, (error) => {
+          statusMsg.textContent = "Failed to send. Try again later.";
+          console.error('FAILED...', error);
+        });
+    });
+  </script>
+</body>
+</html>
