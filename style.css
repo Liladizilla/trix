@@ -492,7 +492,7 @@ services {
     }
 }
 /* =========================
-   CYBERZILLA APP CARDS
+   CYBERZILLA APP CARDS (FULL REPLACEMENT)
    ========================= */
 
 #apps {
@@ -504,7 +504,7 @@ services {
   );
 }
 
-/* Grid */
+/* GRID */
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -512,77 +512,122 @@ services {
   margin-top: 40px;
 }
 
-/* Card */
+/* CARD */
 .app-card {
   position: relative;
   overflow: hidden;
 
   background: rgba(10, 15, 20, 0.75);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 255, 247, 0.15);
-  border-radius: 16px;
-  padding: 25px 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 247, 0.18);
+  border-radius: 18px;
 
+  padding: 26px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: cardFadeUp 0.6s ease forwards;
 }
 
 .app-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0, 255, 247, 0.2);
+  box-shadow: 0 22px 55px rgba(0, 255, 247, 0.25);
 }
 
-/* Icon */
+/* GLOW TRACKING */
+.app-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    420px circle at var(--x, 50%) var(--y, 50%),
+    rgba(0, 255, 247, 0.28),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.app-card:hover::before {
+  opacity: 1;
+}
+
+/* ICON */
 .app-icon {
-  font-size: 32px;
+  font-size: 34px;
   color: #00fff7;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-/* Title */
+/* TITLE */
 .app-card h3 {
   font-size: 18px;
-  margin-bottom: 10px;
   color: #ffffff;
+  margin-bottom: 10px;
 }
 
-/* Description */
+/* DESCRIPTION */
 .app-card p {
   font-size: 14px;
   color: #cfd8dc;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.35s ease;
 }
 
-/* Reveal text + button on hover */
-.app-card:hover p,
-.app-card:hover .cz-btn {
+.app-card:hover p {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* =========================
-   LAUNCH APP BUTTON
-   ========================= */
+/* BADGES */
+.app-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
 
+.app-badge.live {
+  color: #00ff64;
+  border: 1px solid #00ff64;
+  background: rgba(0, 255, 100, 0.15);
+}
+
+.app-badge.beta {
+  color: #ffd000;
+  border: 1px solid #ffd000;
+  background: rgba(255, 200, 0, 0.15);
+}
+
+.app-badge.private {
+  color: #ff0050;
+  border: 1px solid #ff0050;
+  background: rgba(255, 0, 80, 0.15);
+}
+
+/* LAUNCH BUTTON */
 .cz-btn {
   margin-top: auto;
-  align-self: center;
-
-  padding: 10px 24px;
+  padding: 10px 26px;
   border-radius: 10px;
+
   border: 1px solid #00fff7;
   background: transparent;
   color: #00fff7;
+
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -593,14 +638,53 @@ services {
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
+.app-card:hover .cz-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .cz-btn:hover {
   background: #00fff7;
   color: #000;
-  box-shadow: 0 0 12px rgba(0, 255, 247, 0.8);
+  box-shadow: 0 0 14px rgba(0, 255, 247, 0.9);
 }
 
-/* Click feedback */
 .cz-btn:active {
   transform: scale(0.96);
+}
+
+/* LOCKED STATE */
+.app-card.locked {
+  filter: grayscale(0.85);
+}
+
+.app-card.locked::after {
+  content: "LOCKED";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00fff7;
+  font-weight: 800;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.app-card.locked:hover::after {
+  opacity: 1;
+}
+
+/* ANIMATION */
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
