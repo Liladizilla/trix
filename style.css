@@ -495,6 +495,16 @@ services {
    CYBERZILLA APP CARDS
    ========================= */
 
+#apps {
+  padding: 80px 8%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+/* Grid */
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -502,8 +512,11 @@ services {
   margin-top: 40px;
 }
 
-/* Card container */
+/* Card */
 .app-card {
+  position: relative;
+  overflow: hidden;
+
   background: rgba(10, 15, 20, 0.75);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(0, 255, 247, 0.15);
@@ -544,18 +557,27 @@ services {
   color: #cfd8dc;
   line-height: 1.6;
   margin-bottom: 20px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s ease;
 }
 
-/* Button placement */
-.app-card .cz-btn {
-  margin-top: auto;
+/* Reveal text + button on hover */
+.app-card:hover p,
+.app-card:hover .cz-btn {
+  opacity: 1;
+  transform: translateY(0);
 }
+
 /* =========================
    LAUNCH APP BUTTON
    ========================= */
 
 .cz-btn {
-  position: relative;
+  margin-top: auto;
+  align-self: center;
+
   padding: 10px 24px;
   border-radius: 10px;
   border: 1px solid #00fff7;
@@ -566,21 +588,19 @@ services {
   text-decoration: none;
   cursor: pointer;
 
+  opacity: 0;
+  transform: translateY(10px);
   transition: all 0.3s ease;
 }
 
-/* Glow + fill on hover */
+/* Hover effect */
 .cz-btn:hover {
   background: #00fff7;
   color: #000;
   box-shadow: 0 0 12px rgba(0, 255, 247, 0.8);
 }
 
-/* Keep button at bottom of card */
-.app-card .cz-btn {
-  margin-top: auto;
+/* Click feedback */
+.cz-btn:active {
+  transform: scale(0.96);
 }
-.app-card a.cz-btn {
-  align-self: center;
-}
-
