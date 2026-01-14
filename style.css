@@ -491,44 +491,62 @@ services {
         font-size: 0.85rem; /* Further reduce text size */
     }
 }
-/* Cyberzilla Neon Button */
-.cz-btn {
-  position: relative;
-  padding: 12px 28px;
-  font-size: 14px;
-  font-weight: 600;
+/* =========================
+   CYBERZILLA APP CARDS
+   ========================= */
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Card container */
+.app-card {
+  background: rgba(10, 15, 20, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 247, 0.15);
+  border-radius: 16px;
+  padding: 25px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 255, 247, 0.2);
+}
+
+/* Icon */
+.app-icon {
+  font-size: 32px;
   color: #00fff7;
-  background: transparent;
-  border: 2px solid #00fff7;
-  border-radius: 8px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
+  margin-bottom: 15px;
 }
 
-.cz-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #00fff7;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s ease;
-  z-index: -1;
+/* Title */
+.app-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.cz-btn:hover::before {
-  transform: scaleX(1);
+/* Description */
+.app-card p {
+  font-size: 14px;
+  color: #cfd8dc;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.cz-btn:hover {
-  color: #000;
+/* Button placement */
+.app-card .cz-btn {
+  margin-top: auto;
 }
-
-.cz-btn span {
-  position: relative;
-  z-index: 1;
-}
-
