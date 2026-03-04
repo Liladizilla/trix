@@ -10,7 +10,8 @@
   "repository": "jshttp/accepts",
   "dependencies": {
     "mime-types": "^3.0.0",
-    "negotiator": "^1.0.0"
+    "negotiator": "^1.0.0",
+    "three": "^0.183.2"
   },
   "devDependencies": {
     "deep-equal": "1.0.1",

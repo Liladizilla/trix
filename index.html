@@ -8,17 +8,39 @@
     <meta name="author" content="CYBERZILLA">
     <title>Cyberzilla - The Future of AI & Automation</title>
     <link rel="icon" href="assets/images/bots.webp" type="image/x-icon">
+    <!-- Google Fonts - Orbitron for futuristic look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <a href="https://cyberzilla.kit.com/02484f67e9" target="_blank" class="floating-btn">Join Newsletter</a>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3027151162686051"
      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="three.min.js"></script>
 </head>
 <body>
-<canvas id="bgCanvas"></canvas>
+<!-- Loading Screen -->
+<div id="loader">
+    <div class="loader-content">
+        <div class="loader-ring"></div>
+        <div class="loader-text">INITIALIZING</div>
+        <div class="loader-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</div>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<canvas id="bgCanvas" width="1920" height="1080"></canvas>
     <header>
-        <nav>
+        <nav class="scrolled">
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="services.html">Services</a></li>
@@ -31,145 +53,145 @@
           </nav>
     </header>
 
-    <section id="home">
-        <div class="hero">
-            <h1>Welcome to Cyberzilla</h1>
-            <p>Your gateway to the future of AI & Automation</p>
-            <a href="#apps" class="cta-btn">Explore Apps</a>
+    <section id="home" class="parallax-section">
+        <div class="hero" style="background: rgba(0,0,0,0.9) !important;">
+            <h1 data-aos="fade-down" style="color: #00FFFF !important; font-size: 4rem !important; font-weight: bold !important; text-shadow: 0 0 20px #00FFFF, 0 0 40px #00FFFF !important; opacity: 1 !important; transform: none !important; display: block !important; visibility: visible !important;">Welcome to Cyberzilla</h1>
+            <p data-aos="fade-up" data-aos-delay="200" style="color: #FF00FF !important; font-size: 1.5rem !important; text-shadow: 0 0 15px #FF00FF !important; opacity: 1 !important; transform: none !important; display: block !important; visibility: visible !important;">Your gateway to the future of AI & Automation</p>
+            <a href="#apps" class="cta-btn" data-aos="zoom-in" data-aos-delay="400" style="opacity: 1 !important; transform: none !important;">Explore Apps</a>
         </div>
     </section>
 
-    <section id="apps">
-        <h2>Cyberzilla Apps</h2>
-        <p class="apps-subtitle">Cool Apps created by the company.</p>
+    <section id="apps" class="parallax-section">
+        <h2 data-aos="fade-up" style="color: #00FFFF !important; text-shadow: 0 0 20px #00FFFF !important;">Cyberzilla Apps</h2>
+        <p class="apps-subtitle" data-aos="fade-up" data-aos-delay="100" style="color: #FF00FF !important; text-shadow: 0 0 15px #FF00FF !important;">Cool Apps created by the company.</p>
         <div class="apps-grid">
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="100" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-gifts"></i>
                 </div>
-                <h3>Stream Gifts App</h3>
-                <p>Manage and send gifts seamlessly with our advanced streaming platforms.</p>
-               <a href="https://charis5ibikf.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Stream Gifts App</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Manage and send gifts seamlessly with our advanced streaming platforms.</p>
+               <a href="https://charis5ibikf.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="150" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-home"></i>
                 </div>
-                <h3>Dream House Designer</h3>
-                <p>Design your dream home with AI-powered visualization and planning tools.</p>
-               <a href="https://chariszelqaw.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Dream House Designer</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Design your dream home with AI-powered visualization and planning tools.</p>
+               <a href="https://chariszelqaw.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="200" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-coins"></i>
                 </div>
-                <h3>Money Mentor</h3>
-                <p>Master financial planning and wealth management with intelligent AI guidance.</p>
-                <a href="https://charisb7palv.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Money Mentor</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Master financial planning and wealth management with intelligent AI guidance.</p>
+                <a href="https://charisb7palv.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="250" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-heartbeat"></i>
                 </div>
-                <h3>Life Tracker</h3>
-                <p>Track your health, habits, and personal growth with comprehensive analytics.</p>
-                <a href="https://charishzu7m1.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Life Tracker</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Track your health, habits, and personal growth with comprehensive analytics.</p>
+                <a href="https://charishzu7m1.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="300" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-handshake"></i>
                 </div>
-                <h3>Agreement Tracker</h3>
-                <p>Organize and manage all your contracts and agreements in one secure platform.</p>
-                <a href="https://charisv9xv63.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Agreement Tracker</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Organize and manage all your contracts and agreements in one secure platform.</p>
+                <a href="https://charisv9xv63.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="350" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-robot"></i>
                 </div>
-                <h3>Local AI Task Coordinator</h3>
-                <p>Automate tasks locally with AI-powered intelligent coordination system.</p>
-               <a href="https://charisj3149a.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Local AI Task Coordinator</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Automate tasks locally with AI-powered intelligent coordination system.</p>
+               <a href="https://charisj3149a.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="400" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-search"></i>
                 </div>
-                <h3>TraceZero Forensic Engine</h3>
-                <p>Advanced digital forensics and investigation tools for your device.</p>
-                <a href="https://charis2eu88w.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">TraceZero Forensic Engine</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Advanced digital forensics and investigation tools for your device.</p>
+                <a href="https://charis2eu88w.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="450" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-database"></i>
                 </div>
-                <h3>Evidence Engine</h3>
-                <p>Secure storage and management of critical evidence with AI-powered analysis.</p>
-               <a href="https://chariszgm6la.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Evidence Engine</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Secure storage and management of critical evidence with AI-powered analysis.</p>
+               <a href="https://chariszgm6la.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="500" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>Scope Guardian</h3>
-                <p>Enterprise-grade security monitoring and threat detection in real-time.</p>
-               <a href="https://charisorboof.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Scope Guardian</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Enterprise-grade security monitoring and threat detection in real-time.</p>
+               <a href="https://charisorboof.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="550" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-lock"></i>
                 </div>
-                <h3>Secure Vault Sentinels</h3>
-                <p>Military-grade encryption and vault security for your sensitive data.</p>
-                <a href="https://chariszvccqa.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">Secure Vault Sentinels</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">Military-grade encryption and vault security for your sensitive data.</p>
+                <a href="https://chariszvccqa.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
             </div>
 
-            <div class="app-card">
+            <div class="app-card" data-aos="fade-up" data-aos-delay="600" style="opacity: 1 !important; transform: none !important;">
                 <div class="app-icon">
                     <i class="fas fa-robot"></i>
                 </div>
-                <h3>CyberGPT</h3>
-                <p>An AI chatbot for assistance and intelligent conversations. Just like ChatGPT but smaller.</p>
-                <a href="https://charis6e5zef.lastapp.dev" target="_blank" class="cz-btn">
+                <h3 style="color: #fff !important;">CyberGPT</h3>
+                <p style="color: #ccc !important; opacity: 1 !important;">An AI chatbot for assistance and intelligent conversations. Just like ChatGPT but smaller.</p>
+                <a href="https://charis6e5zef.lastapp.dev" target="_blank" class="cz-btn" style="opacity: 1 !important; transform: none !important; display: inline-block !important; visibility: visible !important;">
   <span>Launch App</span>
 </a>
 
@@ -177,53 +199,46 @@
         </div>
     </section>
 
-    <section id="services">
-        <h2>Our Core Services</h2>
-        <div class="service-card">
+    <section id="services" class="parallax-section">
+        <h2 data-aos="fade-up">Our Core Services</h2>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
             <h3>AI Development</h3>
             <p>Learn more about our services</p>
             <a href="services.html">Learn More</a>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
             <h3>Automation</h3>
             <p>Streamline your processes with automation</p>
             <a href="services.html">Learn More</a>
         </div>
     </section>
 
-    <section id="newsletter" class="newsletter">
-        <h2>Join the CyberZilla Newsletter</h2>
-        <p>Stay updated on the latest tools, AI secrets, and digital hustles. Delivered straight to your inbox.</p>
-        <a href="https://cyberzilla.kit.com/02484f67e9" target="_blank" class="btn">Subscribe Now</a>
+    <section id="newsletter" class="newsletter parallax-section">
+        <h2 data-aos="fade-up">Join the CyberZilla Newsletter</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Stay updated on the latest tools, AI secrets, and digital hustles. Delivered straight to your inbox.</p>
+        <a href="https://cyberzilla.kit.com/02484f67e9" target="_blank" class="btn" data-aos="zoom-in" data-aos-delay="200">Subscribe Now</a>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Cyberzilla is a cutting-edge tech company specializing in AI development, automation, and digital marketing solutions. We aim to bring the future to your doorstep.</p>
+    <section id="about" class="parallax-section">
+        <h2 data-aos="fade-up">About Us</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Cyberzilla is a cutting-edge tech company specializing in AI development, automation, and digital marketing solutions. We aim to bring the future to your doorstep.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
+    <section id="contact" class="parallax-section">
+        <h2 data-aos="fade-up">Contact Us</h2>
+        <form data-aos="fade-up" data-aos-delay="100">
             <input type="text" placeholder="Name" required>
             <input type="email" placeholder="Email" required>
             <textarea placeholder="Your message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
-    <script>
-        fetch('/api/proxy')
-          .then(response => response.json())
-          .then(data => {
-            console.log(data); // Handle the data
-          })
-          .catch(error => console.error('Error:', error));
-      </script>
     <script src="//code.tidio.co/wh5jk8fmjmpn188fjcbfa2bria5eu8yk.js" async></script>
     
     <footer>
         <p>&copy; 2025 Cyberzilla. All rights reserved.</p>
     </footer>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
+
