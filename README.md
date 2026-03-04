@@ -1,140 +1,162 @@
-# accepts
+# Cyberzilla - The Future of AI & Automation
 
-[![NPM Version][npm-version-image]][npm-url]
-[![NPM Downloads][npm-downloads-image]][npm-url]
-[![Node.js Version][node-version-image]][node-version-url]
-[![Build Status][github-actions-ci-image]][github-actions-ci-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
+Welcome to **Cyberzilla**, a cutting-edge tech company website featuring an immersive blackhole-themed experience with stunning animations and interactive elements.
 
-Higher level content negotiation based on [negotiator](https://www.npmjs.com/package/negotiator).
-Extracted from [koa](https://www.npmjs.com/package/koa) for general use.
+![Cyberzilla Banner](https://rare-gallery.com/uploads/posts/514480-science-fiction.jpg)
 
-In addition to negotiator, it allows:
+## 🌟 Website Overview
 
-- Allows types as an array or arguments list, ie `(['text/html', 'application/json'])`
-  as well as `('text/html', 'application/json')`.
-- Allows type shorthands such as `json`.
-- Returns `false` when no types match
-- Treats non-existent headers as `*`
+Cyberzilla is a modern, futuristic website that showcases AI development services, automation solutions, and a collection of innovative web applications. The site features a unique space-themed design with an animated blackhole background.
 
-## Installation
+## 🎨 Visual Design
 
-This is a [Node.js](https://nodejs.org/en/) module available through the
-[npm registry](https://www.npmjs.com/). Installation is done using the
-[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+### Color Palette
+- **Primary Cyan**: `#00FFFF` - Main accent color for headings and interactive elements
+- **Primary Magenta**: `#FF00FF` - Secondary accent for highlights and CTAs
+- **Background**: Deep black `#000000` with space-themed visuals
+- **Text**: White `#FFFFFF` with cyan/magenta glow effects
 
-```sh
-$ npm install accepts
+### Typography
+- **Display Font**: Orbitron (futuristic, tech-style headings)
+- **Body Font**: Rajdhani (clean, modern readability)
+
+## ✨ Animations & Effects
+
+### 1. Blackhole Background (Three.js)
+The centerpiece of the website is an interactive 3D blackhole effect:
+- **Gravitational Lensing**: Light bends around the blackhole event horizon
+- **Accretion Disk**: Swirling ring of superheated matter with cyan/magenta/orange colors
+- **Photon Ring**: Bright ring around the event horizon
+- **Starfield**: 3000+ animated stars in the background
+- **Particle System**: 500 particles being pulled into the blackhole
+
+### 2. Hero Section
+- **Glow Pulse Animation**: Title text pulses with cyan glow
+- **Slide-in Effects**: Text animations on page load
+- **Gradient CTA Button**: Magenta to purple with hover effects
+
+### 3. App Cards
+- **3D Hover Effects**: Cards tilt and lift on hover
+- **Glow Tracking**: Radial gradient follows mouse cursor
+- **Fade-up Animation**: Cards animate in sequence on scroll
+- **Launch Buttons**: Appear with slide-up animation on hover
+
+### 4. Custom Cursor
+- **Main Cursor**: Small cyan dot with glow effect
+- **Cursor Follower**: Larger ring that follows with delay
+- **Hover State**: Expands and changes color on interactive elements
+
+### 5. Sound System
+- **Ambient Audio**: Deep space drone with multiple oscillators
+- **Toggle Button**: Enable/disable sound in bottom-left corner
+- **Frequency Modulation**: Subtle sound variations over time
+
+### 6. Additional Effects
+- **Scroll Progress Bar**: Gradient bar at top of page
+- **Loading Screen**: Animated ring with pulsing text
+- **Backdrop Blur**: Glassmorphism effects on cards and forms
+- **Smooth Scrolling**: CSS-based smooth scroll behavior
+
+## 📱 Sections
+
+### Home/Hero
+- Company logo and tagline
+- Animated title with glow effects
+- Call-to-action button
+
+### Apps Showcase
+- 11 innovative web applications displayed in a responsive grid
+- Each card includes:
+  - Icon
+  - App name
+  - Description
+  - Launch button
+
+### Services
+- AI Development
+- Automation Solutions
+
+### Newsletter
+- Email subscription form
+- Social media links
+
+### About
+- Company description and mission
+
+### Contact
+- Contact form with validation
+- Email and social links
+
+## 🚀 Features
+
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Dark Theme**: Easy on the eyes with space aesthetic
+- **Interactive Elements**: Hover effects, animations, and micro-interactions
+- **Sound Toggle**: Optional ambient space audio
+- **Fast Loading**: Optimized assets and lazy loading
+- **Accessibility**: Semantic HTML and keyboard navigation support
+
+## 🛠️ Technology Stack
+
+- **HTML5**: Semantic markup
+- **CSS3**: Custom properties, animations, flexbox, grid
+- **JavaScript**: Vanilla JS with Three.js for 3D graphics
+- **Three.js**: WebGL-powered blackhole visualization
+- **Font Awesome**: Icon library
+- **Google Fonts**: Orbitron and Rajdhani fonts
+
+## 📂 File Structure
+
+```
+trix/
+├── index.html          # Main HTML file
+├── style.css          # All styles
+├── script.js          # Three.js and animations
+├── three.min.js       # Three.js library (local)
+├── server.js          # Node.js server
+├── package.json       # Dependencies
+├── README.md          # This file
+├── assets/
+│   └── images/        # Image assets
+├── about.html         # About page
+├── blog.html          # Blog page
+├── contact.html       # Contact page
+├── services.html      # Services page
+└── store.html         # Digital store page
 ```
 
-## API
+## 🎯 How to Run
 
-```js
-var accepts = require('accepts')
+### Option 1: Local Server
+```bash
+# Install dependencies
+npm install
+
+# Start the server
+npm start
+# or
+node server.js
 ```
 
-### accepts(req)
+### Option 2: Direct Open
+Simply open `index.html` in any modern web browser.
 
-Create a new `Accepts` object for the given `req`.
+## 🔧 Browser Support
 
-#### .charset(charsets)
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
 
-Return the first accepted charset. If nothing in `charsets` is accepted,
-then `false` is returned.
+## 📄 License
 
-#### .charsets()
+Copyright © 2026 Cyberzilla. All rights reserved.
 
-Return the charsets that the request accepts, in the order of the client's
-preference (most preferred first).
+## 🌐 Links
 
-#### .encoding(encodings)
+- **Website**: [cyberzilla.trix](https://cyberzilla01.pp.ua)
+- **GitHub**: [github.com/Liladizilla/trix](https://github.com/Liladizilla/trix)
 
-Return the first accepted encoding. If nothing in `encodings` is accepted,
-then `false` is returned.
+---
 
-#### .encodings()
-
-Return the encodings that the request accepts, in the order of the client's
-preference (most preferred first).
-
-#### .language(languages)
-
-Return the first accepted language. If nothing in `languages` is accepted,
-then `false` is returned.
-
-#### .languages()
-
-Return the languages that the request accepts, in the order of the client's
-preference (most preferred first).
-
-#### .type(types)
-
-Return the first accepted type (and it is returned as the same text as what
-appears in the `types` array). If nothing in `types` is accepted, then `false`
-is returned.
-
-The `types` array can contain full MIME types or file extensions. Any value
-that is not a full MIME type is passed to `require('mime-types').lookup`.
-
-#### .types()
-
-Return the types that the request accepts, in the order of the client's
-preference (most preferred first).
-
-## Examples
-
-### Simple type negotiation
-
-This simple example shows how to use `accepts` to return a different typed
-respond body based on what the client wants to accept. The server lists it's
-preferences in order and will get back the best match between the client and
-server.
-
-```js
-var accepts = require('accepts')
-var http = require('http')
-
-function app (req, res) {
-  var accept = accepts(req)
-
-  // the order of this list is significant; should be server preferred order
-  switch (accept.type(['json', 'html'])) {
-    case 'json':
-      res.setHeader('Content-Type', 'application/json')
-      res.write('{"hello":"world!"}')
-      break
-    case 'html':
-      res.setHeader('Content-Type', 'text/html')
-      res.write('<b>hello, world!</b>')
-      break
-    default:
-      // the fallback is text/plain, so no need to specify it above
-      res.setHeader('Content-Type', 'text/plain')
-      res.write('hello, world!')
-      break
-  }
-
-  res.end()
-}
-
-http.createServer(app).listen(3000)
-```
-
-You can test this out with the cURL program:
-```sh
-curl -I -H'Accept: text/html' http://localhost:3000/
-```
-
-## License
-
-[MIT](LICENSE)
-
-[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/accepts/master
-[coveralls-url]: https://coveralls.io/r/jshttp/accepts?branch=master
-[github-actions-ci-image]: https://badgen.net/github/checks/jshttp/accepts/master?label=ci
-[github-actions-ci-url]: https://github.com/jshttp/accepts/actions/workflows/ci.yml
-[node-version-image]: https://badgen.net/npm/node/accepts
-[node-version-url]: https://nodejs.org/en/download
-[npm-downloads-image]: https://badgen.net/npm/dm/accepts
-[npm-url]: https://npmjs.org/package/accepts
-[npm-version-image]: https://badgen.net/npm/v/accepts
+*Built with 🚀 by Cyberzilla*
