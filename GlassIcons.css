@@ -1,0 +1,144 @@
+/* GlassIcons.css - Adapted from React component for vanilla HTML/CSS/JS
+   Glassmorphism icons: frosted glass, gradient backs, hover shine/lift/glow.
+   No moving animations. Matches Cyberzilla theme (Orbitron, cyan/magenta glows).
+   Responsive grid. 
+*/
+
+.icon-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.icon-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  font-family: 'Orbitron', 'Arial Black', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsl(0 0% 100% / 0.2);
+  box-shadow: 
+    0 8px 32px hsl(0 0% 0% / 0.37),
+    inset 0 1px 0 hsl(0 0% 100% / 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  min-height: 12rem;
+  aspect-ratio: 1;
+  justify-content: center;
+}
+
+.icon-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.icon-btn:hover::before {
+  left: 100%;
+}
+
+.icon-btn:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+  box-shadow: 
+    0 20px 40px hsl(0 0% 0% / 0.5),
+    0 0 0 1px hsl(0 0% 100% / 0.3),
+    inset 0 1px 0 hsl(0 0% 100% / 0.4),
+    0 0 30px hsl(223 90% 50% / 0.5);
+}
+
+.icon-btn .back {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.icon-btn .front {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 3rem;
+}
+
+.icon-btn__icon {
+  font-size: 2.5rem;
+  color: hsl(0 0% 100% / 0.9);
+  text-shadow: 0 0 10px hsl(223 90% 50% / 0.5);
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover .icon-btn__icon {
+  transform: scale(1.1);
+  text-shadow: 
+    0 0 15px hsl(223 90% 50%),
+    0 0 25px hsl(223 90% 50% / 0.8);
+}
+
+.icon-btn__label {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.icon-btn:hover .icon-btn__label {
+  opacity: 1;
+}
+
+/* Theme glows */
+.icon-btn:hover {
+  box-shadow: 
+    0 25px 50px hsla(0 0% 0% / 0.6),
+    0 0 40px hsla(223 90% 50% / 0.6),
+    inset 0 1px 0 hsla(0 0% 100% / 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .icon-btns {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .icon-btn {
+    padding: 1.25rem;
+    min-height: 10rem;
+  }
+  
+  .icon-btn__icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-btns {
+    gap: 1rem;
+  }
+}
+

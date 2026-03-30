@@ -422,6 +422,7 @@ section p {
     margin-bottom: 50px !important;
 }
 
+/* LEGACY APPS - DISABLED FOR GLASS ICONS 
 /* GRID */
 .apps-grid {
     display: grid;
@@ -556,6 +557,7 @@ section p {
 .cz-btn:active {
     transform: scale(0.95);
 }
+ LEGACY APPS END */
 
 /* ========================================
    SERVICES SECTION

@@ -472,6 +472,33 @@
         }
     }
 
+    // Glass Icons support + disable moving background (particles/blackhole)
+    const gradientMapping = {
+      blue: 'linear-gradient(hsl(223, 90%, 50%), hsl(208, 90%, 50%))',
+      purple: 'linear-gradient(hsl(283, 90%, 50%), hsl(268, 90%, 50%))',
+      red: 'linear-gradient(hsl(3, 90%, 50%), hsl(348, 90%, 50%))',
+      indigo: 'linear-gradient(hsl(253, 90%, 50%), hsl(238, 90%, 50%))',
+      orange: 'linear-gradient(hsl(43, 90%, 50%), hsl(28, 90%, 50%))',
+      green: 'linear-gradient(hsl(123, 90%, 40%), hsl(108, 90%, 40%))'
+    };
+
+    // Set gradient backgrounds for glass icons
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.icon-btn[data-color]').forEach(btn => {
+        const color = btn.dataset.color;
+        if (gradientMapping[color]) {
+          btn.querySelector('.back').style.background = gradientMapping[color];
+        }
+      });
+    });
+
+    // Disable moving background (keep static starfield)
+    if (particles) particles.visible = false;
+    if (blackholeMaterial) {
+      blackholeMaterial.uniforms.uTime.value = 0; // Freeze time
+      blackholeMaterial.opacity = 0.1; // Fade out
+    }
+
     // Initialize after a short delay
     setTimeout(() => {
         hideLoader();
