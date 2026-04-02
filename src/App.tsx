@@ -1,5 +1,6 @@
 import React from 'react';
 import { GridScan } from './GridScan';
+import '../style.css'; // Main styles
 import '../GlassIcons.css'; // Glass icons overlay
 
 function App() {
