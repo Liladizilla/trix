@@ -10,8 +10,18 @@ const vert = ` [user vert shader] `;
 
 const frag = ` [user frag shader] `;
 
+export interface GridScanProps {
+  [key: string]: any;
+}
+
 export const GridScan: React.FC<GridScanProps> = (props) => {
-  // [Full component code]
+  // TODO: restore full scan implementation from your source.
+  // Temporary simple placeholder to enable TypeScript build.
+  return (
+    <div id="gridscan-root" className="gridscan-placeholder">
+      {/* Grid scan background placeholder */}
+    </div>
+  );
 };
 
 // [All helper functions: srgbColor, smoothDampVec2, etc.]

@@ -735,6 +735,34 @@ footer p {
 }
 
 /* ========================================
+   LAYOUT CLASSES FOR REACT COMPONENTS
+   ======================================== */
+.gridscan-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.main-overlay {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+.apps-section-layout {
+    padding: 100px 20px;
+}
+
+.gridscan-placeholder {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 768px) {

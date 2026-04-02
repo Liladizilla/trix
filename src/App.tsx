@@ -1,3 +1,4 @@
+import React from 'react';
 import { GridScan } from './GridScan';
 import '../GlassIcons.css'; // Glass icons overlay
 
@@ -21,22 +22,22 @@ function App() {
         noiseIntensity={0.02}
         enableGyro={true}
         scanOnClick={true}
-        style={{position: 'fixed', inset: 0, zIndex: -1}}
+        className="gridscan-bg"
       />
       {/* Overlay glass icons section */}
-      <main style={{position: 'relative', zIndex: 1, minHeight: '100vh'}}>
-        <section id="apps" style={{padding: '100px 20px'}}>
+      <main className="main-overlay">
+        <section id="apps" className="apps-section-layout">
           <h2>Cyberzilla Apps</h2>
-          <p class="apps-subtitle">Cool Apps created by the company.</p>
-          <div class="apps-grid icon-btns" role="list">
+          <p className="apps-subtitle">Cool Apps created by the company.</p>
+          <div className="apps-grid icon-btns" role="group" aria-label="Cyberzilla applications">
             {/* Glass icons HTML from previous */}
-            <a href="https://charis5ibikf.lastapp.dev" target="_blank" rel="noopener noreferrer" class="icon-btn" data-color="blue" aria-label="Launch Stream Gifts App">
-              <span class="back"></span>
-              <span class="front">
-                <span class="icon-btn__icon" aria-hidden="true">
-                  <i class="fas fa-gifts"></i>
+            <a href="https://charis5ibikf.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="blue">
+              <span className="back"></span>
+              <span className="front">
+                <span className="icon-btn__icon" aria-hidden="true">
+                  <i className="fas fa-gifts"></i>
                 </span>
-                <span class="icon-btn__label">Stream Gifts</span>
+                <span className="icon-btn__label">Stream Gifts</span>
               </span>
             </a>
             {/* ... 8 more ... */}
