@@ -1,6 +1,25 @@
-/* Basic GridScan styles placeholder */
-#gridscan-root {
-  width: 100%;
-  height: 100%;
+/* GridScan.css - Cyber grid scan effect styles */
+
+.gridscan-canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
   pointer-events: none;
 }
+
+#gridscan-root {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.gridscan-placeholder {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at center, rgba(0,212,255,0.03) 0%, transparent 70%);
+}
+

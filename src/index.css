@@ -1,4 +1,27 @@
-/* Minimal base styles */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body, html, #root { width: 100%; height: 100%; }
-body { font-family: 'Rajdhani', sans-serif; background-color: #000; color: #fff; }
+/* src/index.css - Vite React base + fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
