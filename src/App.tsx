@@ -46,104 +46,104 @@ function App() {
           <h2>Cyberzilla Apps</h2>
           <p className="apps-subtitle">Cool Apps created by the company.</p>
           <div className="apps-grid icon-btns" role="group" aria-label="Cyberzilla applications">
-            {/* Full Cyberzilla Apps - 11 creative apps with descriptions preserved */}
-            <a href="https://charis5ibikf.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="blue">
+            {/* 11 Apps - All URLs updated */}
+            <a href="https://chariszelqaw.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="blue">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
-                  <i className="fas fa-gifts"></i>
+                  <i className="fas fa-gift"></i>
                 </span>
                 <span className="icon-btn__label">Stream Gifts</span>
               </span>
             </a>
-            <a href="https://cyberzilla-home.ai" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="indigo">
+            <a href="https://charissibikf.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="indigo">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
                   <i className="fas fa-home"></i>
                 </span>
-                <span className="icon-btn__label">Smart Home</span>
+                <span className="icon-btn__label">Dream House Designer</span>
               </span>
             </a>
-            <a href="https://cyberzilla-finance.app" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="green">
+            <a href="https://charisb7palv.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="green">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
                   <i className="fas fa-dollar-sign"></i>
                 </span>
-                <span className="icon-btn__label">Money Manager</span>
+                <span className="icon-btn__label">Money Mentor</span>
               </span>
             </a>
-            <a href="https://cyberzilla-chat.ai" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="purple">
-              <span className="back"></span>
-              <span className="front">
-                <span className="icon-btn__icon" aria-hidden="true">
-                  <i className="fas fa-robot"></i>
-                </span>
-                <span className="icon-btn__label">AI Chat</span>
-              </span>
-            </a>
-            <a href="https://cyberzilla-security.tech" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="red">
-              <span className="back"></span>
-              <span className="front">
-                <span className="icon-btn__icon" aria-hidden="true">
-                  <i className="fas fa-shield-alt"></i>
-                </span>
-                <span className="icon-btn__label">Cyber Security</span>
-              </span>
-            </a>
-            <a href="https://cyberzilla-data.viz" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="orange">
+            <a href="https://charisj3149a.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="orange">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
                   <i className="fas fa-chart-line"></i>
                 </span>
-                <span className="icon-btn__label">Data Viz</span>
+                <span className="icon-btn__label">Life Progress Tracker</span>
               </span>
             </a>
-            <a href="https://cyberzilla-ar.try" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="yellow">
+            <a href="https://charisv9xv63.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="red">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
-                  <i className="fas fa-vr-cardboard"></i>
+                  <i className="fas fa-file-contract"></i>
                 </span>
-                <span className="icon-btn__label">AR TryOn</span>
+                <span className="icon-btn__label">Agreement Tracker</span>
               </span>
             </a>
-            <a href="https://cyberzilla-nft.market" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="purple">
+            <a href="https://charisj3149a.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="purple">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
-                  <i className="fas fa-coins"></i>
+                  <i className="fas fa-tasks"></i>
                 </span>
-                <span className="icon-btn__label">NFT Market</span>
+                <span className="icon-btn__label">Local AI Task Coordinator</span>
               </span>
             </a>
-            <a href="https://cyberzilla-stream.live" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="cyan">
+            <a href="https://charis2eu88w.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="cyan">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
-                  <i className="fas fa-video"></i>
+                  <i className="fas fa-search"></i>
                 </span>
-                <span className="icon-btn__label">Live Stream</span>
+                <span className="icon-btn__label">TraceZero Forensic Engine</span>
               </span>
             </a>
-            <a href="https://cyberzilla-code.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="magenta">
+            <a href="https://chariszgm6la.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="blue">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
-                  <i className="fas fa-code"></i>
+                  <i className="fas fa-lock"></i>
                 </span>
-                <span className="icon-btn__label">Code Editor</span>
+                <span className="icon-btn__label">Evidence Engine</span>
               </span>
             </a>
-            <a href="https://cyberzilla-bot.trade" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="green">
+            <a href="https://charisorboof.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="teal">
+              <span className="back"></span>
+              <span className="front">
+                <span className="icon-btn__icon" aria-hidden="true">
+                  <i className="fas fa-shield-alt"></i>
+                </span>
+                <span className="icon-btn__label">Scope Guardian</span>
+              </span>
+            </a>
+            <a href="https://chariszvccqa.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="magenta">
+              <span className="back"></span>
+              <span className="front">
+                <span className="icon-btn__icon" aria-hidden="true">
+                  <i className="fas fa-vault"></i>
+                </span>
+                <span className="icon-btn__label">Secure Vault Sentinels</span>
+              </span>
+            </a>
+            <a href="https://charis6e5zef.lastapp.dev" target="_blank" rel="noopener noreferrer" className="icon-btn" data-color="pink">
               <span className="back"></span>
               <span className="front">
                 <span className="icon-btn__icon" aria-hidden="true">
                   <i className="fas fa-robot"></i>
                 </span>
-                <span className="icon-btn__label">Trading Bot</span>
+                <span className="icon-btn__label">Small ChatGPT</span>
               </span>
             </a>
           </div>
