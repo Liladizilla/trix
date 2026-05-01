@@ -26,16 +26,17 @@ function App() {
         className="gridscan-bg"
       />
       {/* Full professional layout */}
-      <header>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#apps">Apps</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+       <header>
+         <nav>
+           <ul>
+             <li><a href="#home">Home</a></li>
+             <li><a href="#apps">Apps</a></li>
+             <li><a href="#services">Services</a></li>
+             <li><a href="iso.html">OS</a></li>
+             <li><a href="#contact">Contact</a></li>
+           </ul>
+         </nav>
+       </header>
       <section id="home" className="hero">
         <h1>Cyberzilla</h1>
         <p>The Future of AI & Automation</p>
