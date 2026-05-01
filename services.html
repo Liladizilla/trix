@@ -3,75 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Cyberzilla Services</title>
+    <title>Cyberzilla Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="GlassIcons.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="store.html">Digital Store</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="store.html">Digital Store</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero" id="home">
+    <h1>Our Services</h1>
+    <p>AI Development & Automation Solutions</p>
+  </section>
+
+  <main>
     <section class="services">
-        <h2 class="section-title">Services</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <h3>AI & Automation</h3>
-                <ul>
-                    <li>Custom Telegram Bots</li>
-                    <li>WhatsApp Automation Bots</li>
-                    <li>AI Task Bots</li>
-                    <li>Bot-as-a-Service (BaaS)</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Web Development</h3>
-                <ul>
-                    <li>Business/Portfolio Websites</li>
-                    <li>Full-Stack Web Apps (Node.js / Django)</li>
-                    <li>API Development & Integration</li>
-                    <li>AI-powered Web Tools</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Courses & Digital Products</h3>
-                <ul>
-                    <li>AI Bot Hustle eBook</li>
-                    <li>Beginner Automation Course</li>
-                    <li>Bot Packs with Code</li>
-                    <li>Done-for-you Templates</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Graphic Design</h3>
-                <ul>
-                    <li>Album Covers / Futuristic Art</li>
-                    <li>AI-generated Art Bundles</li>
-                    <li>Stream Overlays & Thumbnails</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Consulting & Setup</h3>
-                <ul>
-                    <li>Bot Setup for Businesses</li>
-                    <li>Website Automation Optimization</li>
-                    <li>Tech Stack Planning</li>
-                    <li>Content Automation Strategy</li>
-                </ul>
-            </div>
+      <h2 class="section-title">What We Offer</h2>
+      <div class="services-container">
+        <div class="service-item">
+          <h3>🤖 AI & Automation</h3>
+          <ul>
+            <li>Custom Telegram Bots</li>
+            <li>WhatsApp Automation Bots</li>
+            <li>AI Task Bots</li>
+            <li>Bot-as-a-Service (BaaS)</li>
+          </ul>
         </div>
+        <div class="service-item">
+          <h3>💻 Web Development</h3>
+          <ul>
+            <li>Business/Portfolio Websites</li>
+            <li>Full-Stack Web Apps (Node.js / Django)</li>
+            <li>API Development & Integration</li>
+            <li>AI-powered Web Tools</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>📚 Courses & Digital Products</h3>
+          <ul>
+            <li>AI Bot Hustle eBook</li>
+            <li>Beginner Automation Course</li>
+            <li>Bot Packs with Code</li>
+            <li>Done-for-you Templates</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>🎨 Graphic Design</h3>
+          <ul>
+            <li>Album Covers / Futuristic Art</li>
+            <li>AI-generated Art Bundles</li>
+            <li>Stream Overlays & Thumbnails</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>⚙️ Consulting & Setup</h3>
+          <ul>
+            <li>Bot Setup for Businesses</li>
+            <li>Website Automation Optimization</li>
+            <li>Tech Stack Planning</li>
+            <li>Content Automation Strategy</li>
+          </ul>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Cyberzilla. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2026 Cyberzilla. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollTop || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scrollProgress').style.width = progress + '%';
+    });
+  </script>
 </body>
 </html>

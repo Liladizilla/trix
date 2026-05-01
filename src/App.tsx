@@ -173,7 +173,7 @@ function App() {
           </form>
         </section>
         <footer>
-          <p>&copy; 2024 Cyberzilla. All rights reserved.</p>
+          <p>&copy; 2026 Cyberzilla. All rights reserved.</p>
         </footer>
       </main>
     </div>
