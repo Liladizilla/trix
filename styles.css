@@ -135,6 +135,80 @@ body.cursor-link #cursor-ring { width: 54px; height: 54px; border-color: var(--o
   opacity: 0.5;
 }
 
+.chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-mute);
+  margin-bottom: 0.75rem;
+}
+
+.services-hero {
+  margin-bottom: 3rem;
+}
+
+.download-section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.iso-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin-bottom: 3rem;
+}
+
+.iso-hero img { width: 100%; height: 100%; object-fit: cover; }
+.iso-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(6,8,16,0.3) 0%, rgba(6,8,16,0.85) 100%);
+}
+
+.os-hero-section-eye {
+  margin-bottom: 0.5rem;
+}
+
+.download-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.spacer-3rem {
+  height: 3rem;
+}
+
+.featured-product {
+  border-color: rgba(0,212,255,0.35);
+}
+
+.cta-full-width {
+  display: block;
+}
+
+.read-more {
+  margin-top: 1.25rem;
+}
+
+.product-cta {
+  margin-top: 1.25rem;
+}
+
+.response-time-card .muted {
+  font-size: 0.9rem;
+}
+
 /* ---------- header ---------- */
 header {
   position: fixed;
@@ -148,7 +222,7 @@ header {
   border-bottom: 1px solid var(--line);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-header.scrolled { background: rgba(6,8,16,0.96); box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+
 nav {
   max-width: var(--max); margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
