@@ -1,97 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberzilla Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="GlassIcons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Cyberzilla</title>
+  <meta name="description" content="AI &amp; automation services from Cyberzilla: bots, web dev, consulting, design." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Services — Cyberzilla AI &amp; Automation">
+  <meta property="og:description" content="End-to-end AI development and automation — custom Telegram bots, web apps, consulting, and digital products.">
+  <meta property="og:image" content="assets/images/bots.webp">
+  <meta property="og:url" content="https://cyberzilla.tech/services.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-  
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div id="loader" role="status">
+    <div class="loader-logo">CYBER<span>ZILLA</span></div>
+    <div class="loader-status">Booting systems...</div>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
   <header>
     <nav>
-      <ul>
+      <a href="index.html" class="brand" data-text="CYBERZILLA">CYBER<span>ZILLA</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="store.html">Digital Store</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="store.html">Store</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="iso.html">OS</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <h1>Our Services</h1>
-    <p>AI Development & Automation Solutions</p>
-  </section>
+  <main id="main" class="page-pad">
+    <div class="section">
 
-  <main>
-    <section class="services">
-      <h2 class="section-title">What We Offer</h2>
-      <div class="services-container">
-        <div class="service-item">
-          <h3>🤖 AI & Automation</h3>
+      <div class="split-section" style="margin-bottom:3rem;">
+        <div>
+          <div class="section-eye">services</div>
+          <h1 class="section-title"><span class="title-inner">What we offer</span></h1>
+          <p class="section-sub">End-to-end AI development and automation — from the first line of code to a live, monitored deployment.</p>
+          <div style="margin-top:1.5rem;">
+            <span class="mag-wrap"><a href="contact.html" class="cta-btn">Get a quote</a></span>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="assets/images/bots.webp" alt="Robot automation illustration" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="card-icon">🤖</span>
+          <h3>AI &amp; Automation</h3>
           <ul>
-            <li>Custom Telegram Bots</li>
-            <li>WhatsApp Automation Bots</li>
-            <li>AI Task Bots</li>
+            <li>Custom Telegram bots</li>
+            <li>WhatsApp automation</li>
+            <li>AI task bots</li>
             <li>Bot-as-a-Service (BaaS)</li>
           </ul>
         </div>
-        <div class="service-item">
-          <h3>💻 Web Development</h3>
+        <div class="card">
+          <span class="card-icon">💻</span>
+          <h3>Web Development</h3>
           <ul>
-            <li>Business/Portfolio Websites</li>
-            <li>Full-Stack Web Apps (Node.js / Django)</li>
-            <li>API Development & Integration</li>
-            <li>AI-powered Web Tools</li>
+            <li>Business / portfolio websites</li>
+            <li>Full-stack apps (Node.js / Django)</li>
+            <li>API development &amp; integration</li>
+            <li>AI-powered web tools</li>
           </ul>
         </div>
-        <div class="service-item">
-          <h3>📚 Courses & Digital Products</h3>
+        <div class="card">
+          <span class="card-icon">📚</span>
+          <h3>Courses &amp; Digital Products</h3>
           <ul>
             <li>AI Bot Hustle eBook</li>
-            <li>Beginner Automation Course</li>
-            <li>Bot Packs with Code</li>
-            <li>Done-for-you Templates</li>
+            <li>Beginner automation course</li>
+            <li>Bot packs with source code</li>
+            <li>Done-for-you templates</li>
           </ul>
         </div>
-        <div class="service-item">
-          <h3>🎨 Graphic Design</h3>
+        <div class="card">
+          <span class="card-icon">🎨</span>
+          <h3>Graphic Design</h3>
           <ul>
-            <li>Album Covers / Futuristic Art</li>
-            <li>AI-generated Art Bundles</li>
-            <li>Stream Overlays & Thumbnails</li>
+            <li>Album covers / futuristic art</li>
+            <li>AI-generated art bundles</li>
+            <li>Stream overlays &amp; thumbnails</li>
           </ul>
         </div>
-        <div class="service-item">
-          <h3>⚙️ Consulting & Setup</h3>
+        <div class="card">
+          <span class="card-icon">⚙️</span>
+          <h3>Consulting &amp; Setup</h3>
           <ul>
-            <li>Bot Setup for Businesses</li>
-            <li>Website Automation Optimization</li>
-            <li>Tech Stack Planning</li>
-            <li>Content Automation Strategy</li>
+            <li>Bot setup for businesses</li>
+            <li>Website automation optimization</li>
+            <li>Tech stack planning</li>
+            <li>Content automation strategy</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Cyberzilla. All rights reserved.</p>
+    <div class="footer-inner">
+      <div><div class="footer-brand">CYBER<span>ZILLA</span></div><div class="footer-status">[ static · zero trackers · nairobi ]</div></div>
+      <nav class="footer-links">
+        <a href="https://github.com/Liladizilla" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Cyberzilla Technologies</p>
+    </div>
   </footer>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollTop || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      document.getElementById('scrollProgress').style.width = progress + '%';
-    });
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

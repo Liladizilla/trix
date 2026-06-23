@@ -1,15 +1,211 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cyberzilla Trix - GridScan BG</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyberzilla — AI &amp; Automation</title>
+  <meta name="description" content="Cyberzilla builds AI-powered apps, automation tools, and a from-scratch OS — eleven live tools and growing." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cyberzilla — AI &amp; Automation">
+  <meta property="og:description" content="Eleven live AI-powered apps, automation services, and a from-scratch operating system. Built in Nairobi.">
+  <meta property="og:image" content="assets/images/1350201-FuturisticSci-Fi-City-4k-Ultra-HD-Wallpaper.jpg">
+  <meta property="og:url" content="https://cyberzilla.tech/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- custom cursor -->
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="cursor-dot"  aria-hidden="true"></div>
+
+  <!-- scanlines -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- loader -->
+  <div id="loader" role="status" aria-label="Loading Cyberzilla">
+    <div class="loader-logo">CYBER<span>ZILLA</span></div>
+    <div class="loader-status">Booting systems...</div>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="brand" data-text="CYBERZILLA" aria-label="Cyberzilla home">CYBER<span>ZILLA</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="iso.html">OS</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow">system online · nairobi, ke</div>
+        <h1>The future of AI &amp; <em>automation</em></h1>
+        <p class="hero-sub">Cyberzilla ships AI-powered apps, automation tools, and systems software — eleven live tools, a growing service line, and an operating system built from scratch.</p>
+        <div class="hero-btns">
+          <span class="mag-wrap"><a href="#apps" class="cta-btn">Explore apps</a></span>
+          <span class="mag-wrap"><a href="contact.html" class="cta-btn ghost">Get in touch</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- stats -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num" data-count="11" data-suffix="+">11+</div>
+        <div class="stat-label">Live apps</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="5" data-suffix="">5</div>
+        <div class="stat-label">OS phases done</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="3" data-suffix="">3+</div>
+        <div class="stat-label">Years building</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="100" data-suffix="%">100%</div>
+        <div class="stat-label">Self-taught</div>
+      </div>
+    </div>
+
+    <!-- apps grid -->
+    <section id="apps" class="section" aria-label="Cyberzilla apps">
+      <div class="section-head">
+        <div class="section-eye">Live products</div>
+        <h2 class="section-title"><span class="title-inner">Cyberzilla apps</span></h2>
+        <p class="section-sub">All eleven tools built and shipped. Click any to open.</p>
+      </div>
+      <div class="grid grid-apps">
+        <a class="app-tile" href="https://chariszelqaw.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">🎁</div>
+          <span>Stream Gifts</span>
+          <small>live · streaming</small>
+        </a>
+        <a class="app-tile" href="https://charissibikf.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">🏠</div>
+          <span>Dream House Designer</span>
+          <small>live · AI</small>
+        </a>
+        <a class="app-tile" href="https://charisb7palv.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">💰</div>
+          <span>Money Mentor</span>
+          <small>live · finance</small>
+        </a>
+        <a class="app-tile" href="https://charisj3149a.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">📈</div>
+          <span>Life Progress Tracker</span>
+          <small>live · productivity</small>
+        </a>
+        <a class="app-tile" href="https://charisv9xv63.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">📝</div>
+          <span>Agreement Tracker</span>
+          <small>live · legal</small>
+        </a>
+        <a class="app-tile" href="https://charisj3149a.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">🤖</div>
+          <span>AI Task Coordinator</span>
+          <small>live · AI</small>
+        </a>
+        <a class="app-tile" href="https://charis2eu88w.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">🔍</div>
+          <span>TraceZero Forensic</span>
+          <small>live · security</small>
+        </a>
+        <a class="app-tile" href="https://chariszgm6la.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">🔒</div>
+          <span>Evidence Engine</span>
+          <small>live · security</small>
+        </a>
+        <a class="app-tile" href="https://charisorboof.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">🛡️</div>
+          <span>Scope Guardian</span>
+          <small>live · security</small>
+        </a>
+        <a class="app-tile" href="https://chariszvccqa.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">🏛️</div>
+          <span>Secure Vault Sentinels</span>
+          <small>live · security</small>
+        </a>
+        <a class="app-tile" href="https://charis6e5zef.lastapp.dev" target="_blank" rel="noopener noreferrer">
+          <div class="app-tile-icon">💬</div>
+          <span>Small ChatGPT</span>
+          <small>live · AI</small>
+        </a>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section class="section" aria-label="Services">
+      <div class="section-head">
+        <div class="section-eye">What we build</div>
+        <h2 class="section-title"><span class="title-inner">Services</span></h2>
+        <p class="section-sub">AI development and automation — custom-built for your use case.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="card-icon">🤖</span>
+          <h3>AI Development</h3>
+          <p>Custom models, chatbots, computer vision, and intelligent APIs — deployed, documented, and maintained.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">⚙️</span>
+          <h3>Process Automation</h3>
+          <p>Telegram bots, WhatsApp automation, RPA workflows, and content systems that run 24/7.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">💻</span>
+          <h3>Web &amp; API Development</h3>
+          <p>Full-stack apps on Node.js / Django / Python, REST or GraphQL, cloud-deployed.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">🎨</span>
+          <h3>Design &amp; Digital Products</h3>
+          <p>Stream overlays, AI-generated art bundles, eBooks, templates, and courses.</p>
+        </div>
+      </div>
+      <p style="margin-top:2rem;"><a href="services.html" class="mono" style="color:var(--cyan);">Full service list →</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">CYBER<span>ZILLA</span></div>
+        <div class="footer-status">[ static · zero trackers · nairobi ]</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://github.com/Liladizilla" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://portfolio-self-five-47.vercel.app" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Cyberzilla Technologies</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
