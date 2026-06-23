@@ -90,6 +90,23 @@ body.cursor-link #cursor-ring { width: 54px; height: 54px; border-color: var(--o
   align-items: center; justify-content: center;
   gap: 2rem;
 }
+
+/* Ensure main content is accessible even if JS fails */
+main {
+  opacity: 0;
+}
+
+/* Once loader is hidden, show content */
+#loader[style*="display: none"] + main,
+#loader.loader-hidden + main,
+body.loader-complete main {
+  opacity: 1;
+}
+
+/* If JS doesn't load, loader still hides after 3s */
+.loader-fallback {
+  animation: loader-fallback-hide 0.7s ease-in-out 3s forwards;
+}
 .loader-logo {
   font-family: var(--font-display); font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 900; letter-spacing: 0.08em;

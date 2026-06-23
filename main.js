@@ -18,13 +18,24 @@ if (window.gsap && window.ScrollTrigger) {
 
 // ── 2. Loading screen ─────────────────────────────────────────────────────
 
+function hideLoader() {
+  const loader = $('#loader');
+  if (loader) {
+    loader.style.transform = 'translateY(-100%)';
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 700);
+  }
+}
+
 function runLoader() {
   const loader = $('#loader');
-  if (!loader) return;
-
   const fill = $('.loader-bar-fill');
   const pct  = $('.loader-pct');
   const status = $('.loader-status');
+
+  if (!loader) return;
+
   const lines = [
     'Initializing kernel...',
     'Loading asset pipeline...',
@@ -40,23 +51,37 @@ function runLoader() {
     }
   }, 380);
 
-  const tl = gsap.timeline({
-    onComplete: () => {
-      clearInterval(interval);
-      initSite();
-    }
-  });
+  // Hide loader after 2.5 seconds max (fallback)
+  setTimeout(() => {
+    clearInterval(interval);
+    hideLoader();
+    initSite();
+  }, 2500);
 
-  tl.to(fill, { width: '100%', duration: 1.9, ease: 'power2.inOut' })
-    .to(pct, {
-      textContent: 100,
-      duration: 1.9,
-      ease: 'power2.inOut',
-      snap: { textContent: 1 },
-      onUpdate() { if (pct) pct.textContent = Math.round(this.targets()[0]._gsap.textContent) + '%'; }
-    }, '<')
-    .to(loader, { yPercent: -100, duration: 0.7, ease: 'power3.inOut', delay: 0.3 })
-    .set(loader, { display: 'none' });
+  // Use GSAP if available
+  if (window.gsap && fill && pct) {
+    try {
+      const tl = gsap.timeline({
+        onComplete: () => {
+          clearInterval(interval);
+          initSite();
+        }
+      });
+
+      tl.to(fill, { width: '100%', duration: 1.9, ease: 'power2.inOut' })
+        .to(pct, {
+          textContent: 100,
+          duration: 1.9,
+          ease: 'power2.inOut',
+          snap: { textContent: 1 },
+          onUpdate() { if (pct) pct.textContent = Math.round(this.targets()[0]._gsap.textContent) + '%'; }
+        }, '<')
+        .to(loader, { yPercent: -100, duration: 0.7, ease: 'power3.inOut', delay: 0.3 })
+        .set(loader, { display: 'none' });
+    } catch (e) {
+      console.error('Loader animation failed:', e);
+    }
+  }
 }
 
 // ── 3. Site init (runs after loader) ──────────────────────────────────────
@@ -393,6 +418,12 @@ function setupCounters() {
 // ── Bootstrap ─────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (reduceMotion) { initSite(); return; }
+  console.log('DOM loaded, starting loader');
+  if (reduceMotion) {
+    console.log('Reduced motion detected, skipping loader');
+    document.getElementById('loader')?.style.setProperty('display', 'none');
+    initSite();
+    return;
+  }
   runLoader();
 });
