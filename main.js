@@ -34,7 +34,10 @@ function runLoader() {
   const pct  = $('.loader-pct');
   const status = $('.loader-status');
 
-  if (!loader) return;
+  if (!loader) {
+    console.warn('Loader element not found');
+    return;
+  }
 
   const lines = [
     'Initializing kernel...',
@@ -51,12 +54,17 @@ function runLoader() {
     }
   }, 380);
 
-  // Hide loader after 2.5 seconds max (fallback)
+  // Fallback: ensure loader completes after 3 seconds max
   setTimeout(() => {
     clearInterval(interval);
-    hideLoader();
+    // Force hide if still visible
+    const l = $('#loader');
+    if (l) {
+      l.style.display = 'none';
+      document.body.style.overflow = '';
+    }
     initSite();
-  }, 2500);
+  }, 3000);
 
   // Use GSAP if available
   if (window.gsap && fill && pct) {
@@ -80,6 +88,11 @@ function runLoader() {
         .set(loader, { display: 'none' });
     } catch (e) {
       console.error('Loader animation failed:', e);
+      // Fallback on error
+      setTimeout(() => {
+        hideLoader();
+        initSite();
+      }, 500);
     }
   }
 }
