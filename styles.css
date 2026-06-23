@@ -149,6 +149,10 @@ body.cursor-link #cursor-ring { width: 54px; height: 54px; border-color: var(--o
   margin-bottom: 3rem;
 }
 
+.store-hero {
+  margin-bottom: 3rem;
+}
+
 .download-section {
   display: flex;
   gap: 1rem;
@@ -173,6 +177,20 @@ body.cursor-link #cursor-ring { width: 54px; height: 54px; border-color: var(--o
   inset: 0;
   background: linear-gradient(to bottom, rgba(6,8,16,0.3) 0%, rgba(6,8,16,0.85) 100%);
 }
+.iso-hero-text {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
+.iso-hero-text h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--text);
+}
+.iso-hero-text p { color: var(--text-dim); margin-top: 0.5rem; }
 
 .os-hero-section-eye {
   margin-bottom: 0.5rem;
@@ -572,8 +590,27 @@ footer {
 .footer-copy { font-size: 0.8rem; color: var(--text-mute); }
 .footer-status { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ok); margin-top: 0.3rem; }
 
+/* ---------- terminal (iso.html) ---------- */
+.terminal {
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: #00ff41;
+  overflow-x: auto;
+}
+.terminal .t-comment { color: #555; }
+.terminal .t-label { color: var(--cyan); }
+.terminal .t-done { color: var(--ok); }
+.terminal .t-wip { color: var(--magenta); }
+
 /* ---------- misc util ---------- */
 .mono { font-family: var(--font-mono); }
 .muted { color: var(--text-dim); }
 .cyan { color: var(--cyan); }
+.cyan-link { color: var(--cyan); }
 .page-pad { padding-top: 6rem; }
+.services-link { margin-top: 2rem; }
