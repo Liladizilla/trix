@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cyberzilla.tech/sitemap.xml
+Sitemap: https://frabjous-unicorn-0c4b7c.netlify.app/sitemap.xml
